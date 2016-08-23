@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/polaron
+
+idspace: POLARON
+base_url: /obo/polaron
+
+products:
+- polaron.owl: https://raw.githubusercontent.com/PolarOntologies/master/polaron.owl
+- polaron.obo: https://raw.githubusercontent.com/PolarOntologies/master/polaron.obo
+
+term_browser: ontobee
+example_terms:
+- POLARON_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/PolarOntologies/polaron/v
+
+- prefix: /tracker/
+  replacement: https://github.com/PolarOntologies/polaron/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/POLARON?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/PolarOntologies/polaron/master/
